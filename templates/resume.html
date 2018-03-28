@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="bootstrap.min.css">
+
+    <title>Résumé of {{contact.name}}</title>
+  </head>
+
+<body>
+<div class="container" style="max-width: 842px;">
+
+<h1 class="display-5">Résumé of {{contact.name}} <small class="text-muted">{{contact.post}}</small></h1>
+
+<blockquote class="blockquote text-right">
+<p class="lead">
+	<small>
+	<address>
+	{% if contact.email %}
+	📧 <a href="mailto:{{contact.email}}">{{contact.email}}</a>
+	{% endif %}
+	{% if contact.email %}
+	📱 {{contact.phone}}
+	{% endif %}
+	{% if contact.address %}
+	📮 {{contact.address}}
+	{% endif %}
+	{% if contact.web %}
+	🌏 <a href="{{contact.web}}">{{contact.web}}</a>
+	{% endif %}
+	</address>
+	</small>
+</p>
+</blockquote>
+
+<section id=experience>
+<h1 class="border-bottom border-dark">Experience</h1>
+
+{% for entry in experience %}
+<div class="row justify-content-start">
+	<div class="col">
+		<strong>{{entry.role}}</strong>
+		{% if entry.website %}
+		<a href="{{entry.website}}"><small class="text-danger">{{entry.company}}</small></a>
+		{% else %}
+		<small class="text-danger">{{entry.company}}</small>
+		{% endif %}
+		<br />
+		<ul>
+		{% for highlight in entry.highlights %}
+		{% if highlight.subpoint %}
+			<ul>
+			{% for subpoint in highlight.subpoint %}
+				<li>{{subpoint}}</li>
+			{% endfor %}
+			</ul>
+		{% else %}
+		<li>{{highlight}}</li>
+		{% endif %}
+		{% endfor %}
+		</ul>
+	</div><!-- /col -->
+	<div class="col-2 text-right">
+		<em>{{entry.date}}</em>
+	</div><!-- /col -->
+</div><!-- /row -->
+{% endfor %}
+
+</section>
+
+<section id=education>
+<h1 class="border-bottom border-dark">Education</h1>
+
+{% for entry in education %}
+<div class="row justify-content-start">
+
+	<div class="col">
+		<strong>{{entry.name}}</strong><br />
+		{{entry.summary}}<br />
+		{{entry.grade}}<br />
+		<ul>
+		{% for highlight in entry.highlights %}
+		<li>{{highlight}}</li>
+		{% endfor %}
+		</ul>
+	</div><!-- /col -->
+	<div class="col-2 text-right">
+		<em>{{entry.date}}</em>
+	</div><!-- /col -->
+</div><!-- /row -->
+{% endfor %}
+
+</section>
+
+
+{% if licences %}
+<section id=licences>
+<h1 class="border-bottom border-dark">Qualifications and Licenses</h1>
+    <ul>
+	{% for entry in licences %}
+		<li>{{entry}}</li>
+	{% endfor %}
+	</ul>
+</section>
+{% endif %}
+
+{% if publications %}
+<section id=publications>
+<h1 class="border-bottom border-dark">Publications</h1>
+    <ul>
+	{% for entry in publications %}
+		<li>"{{entry.title}}", {{entry.authors}} <em><a href="{{entry.link}}">{{entry.published}}</a></em></li>
+	{% endfor %}
+	</ul>
+</section>
+{% endif %}
+
+{% if skills %}
+<section id=skills>
+	<h1 class="border-bottom border-dark">Transferable Skills</h1>
+	<ul>
+	{% for entry in skills %}
+		{% if entry.subpoint %}
+			<ul>
+			{% for subpoint in entry.subpoint %}
+				<li>{{subpoint}}</li>
+			{% endfor %}
+			</ul>
+		{% else %}
+		<li>{{entry}}</li>
+		{% endif %}
+	{% endfor %}
+	</ul>
+</section>
+{% endif %}
+
+</div><!-- /container -->
+</body>
+</html>

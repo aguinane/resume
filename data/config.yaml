@@ -1,0 +1,157 @@
+contact:
+  name: Alex Guinane
+  post: CPEng RPEQ
+  email: alex.guinane@gmail.com
+  phone: (+61) 04 xxxx xxxx
+
+education:
+  - name: Central Queensland University
+    date: 2011
+    summary: Bachelor of Engineering (Electrical) (Co-op) with First Class Honours<br />Diploma of Professional Practice (Engineering)
+    grade: Overall GPA of 6.743 [7 = highest; 0 = lowest]
+    highlights:
+      - IET UK Prize for highest GPA in Bachelor of Engineering (Electrical)
+      - Presented thesis at IET Present Around the World QLD Final
+
+experience:
+  - role: Power Quality Engineer
+    company: Ergon Energy
+    website: https://www.ergon.com.au
+    date: Jun 2014 <br />- present
+    highlights:
+      - Identification and resolution of customer Quality of Supply (QoS) complaints
+      - Analysis of power quality meter recordings, and development of a website suite with automated reporting of QoS issues
+      - Developed automated daily reporting of PQ Health, to proactively identify and rectify site issues before a customer complaint is made
+      - Investigation and analysis into impacts of transitioning Queensland's nominal network voltage from 240 to 230V
+      - subpoint:
+        - Developed business case and pilot project with business savings of $25.4 million
+        - Direct customer engagement with customers part of the pilot project
+        - Worked with Department of Energy and Water Supply (DEWS) to develop a <a href="https://www.dews.qld.gov.au/__data/assets/pdf_file/0005/1279571/decision-ris-qld-statutory-voltage-limits.pdf">regulatory impact statement</a> which predicted savings of $215 million for QLD
+      - Developed automated reporting of momentary outage events to flag unresolved network faults
+      - PQ Subject Matter Expert (SME) for Power Factory Modelling Software and chair of PowerFactory Scripting Committee (PFSC)
+
+  - role: Toowoomba Regional Group Secretary
+    company: Engineers Australia
+    website: https://www.engineersaustralia.org.au/About-Us/Divisions/Queensland/Queensland-Division-Toowoomba
+    date: Jan 2017 <br />- present
+    highlights:
+      - Volunteering on local committee to organise regional CPD events
+
+  - role: Senior Power Quality Engineer (Acting)
+    company: Ergon Energy
+    website: https://www.ergon.com.au
+    date: Mar 2016 <br />- Apr 2016
+    highlights:
+      - Responded to data requests and analysis for customer compensation claims
+      - Responded to government information requests and regulatory reporting requirements
+      - Assisting with major customer connection pre-commisioning testing requirements
+
+  - role: Network Strategy and Policy Engineer (Acting)
+    company: Ergon Energy
+    website: https://www.ergon.com.au
+    date: Sep 2015 <br />- Oct 2015
+    highlights:
+      - Responded to technical customer enquiries about Micro Embedded Generation Units (generally rooftop solar)
+      - Responded to various government questions and information requests
+      - Identified preliminary list of suitable locations for Electric Vechile (EV) charging stations for QLD '<a href="http://www.abc.net.au/news/2017-07-27/free-charging-stations-to-boost-queensland-electric-car-numbers/8748246">super-highway</a>'
+      - Developed preliminary strategy for identifying non-compliance of partial export connections
+      - Developed reporting dashboard for worst performing feeders
+
+  - role: Graduate Electrical Engineer
+    company: Ergon Energy
+    website: https://www.ergon.com.au
+    date: Aug 2011 <br />- Jun 2014
+    highlights:
+      - Secondary Systems (Field Crew) <small class="text-muted">Feb 2014 - Jun 2014</small>
+      - subpoint:
+        - Commissioning of Power Quality Meters in Zone Substations
+        - Installation and testing of protection settings on reclosers
+        - Routine maintenance inspections of communications sites
+      - Network Strategy And Planning <small class="text-muted">Aug 2013 - Feb 2014</small>
+      - subpoint:
+        - Reviewed current transformer rating process, and made improvements to enable semi-automated and more frequent release of transformer ratings
+        - Initiated and managed project to gather and analyse recordings of over 1400 customer meters with PV systems to determine existing and future voltage issues
+        - Developed standard processes and guides for common planning tasks to assist new starters
+      - Regional Asset Management Southern <small class="text-muted">Feb 2013 - Aug 2013</small>
+      - subpoint:
+        - Developed automated reporting suite, to greatly reduce data gathering time for protection reviews and planning reports
+        - Performed distribution feeder transformer voltage tapping plans
+        - Performed investigation into voltage unbalance issues and proposed successful business case to rectify issues
+      - Protection Southern <small class="text-muted">Aug 2012 - Feb 2013</small>
+      - subpoint:
+        - Performed protection reviews for contingency events to ensure safety was maintained during planned outages
+        - Performed substation protection reviews to ensure all feeders retain adequate protection after network augmentation and load changes
+      - Substation Standards Condition Monitoring <small class="text-muted">Feb 2012 - Aug 2012</small>
+      - subpoint:
+        - Developed standard for power transformer oil testing, and identified existing errors in current condition monitoring analysis process
+        - Development and deployment of Asset Management Inspection Tool, as part of a Joint Workings maintenance framework project with Energex
+      - Alternative Energy Solutions <small class="text-muted">Aug 2011 - Feb 2012</small>
+      - subpoint:
+        - Performed investigation into the proposed new Dingo Substation and was able to defer project for 3+ years through demand reduction
+        - Developed automated process to determine feasibility of demand reduction opportunities of all proposed capital projects
+        - Identified opportunity to defer $1mil transformer upgrade as a result of Digital TV switch-over
+
+  - role: Power Electronic System Development Intern
+    company: ABB Switzerland
+    website: http://www.abb.ch
+    date: Jul 2010 <br />- Dec 2010
+    highlights:
+      - Developing specification requirements for type testing of protection software of a frequency converter (for railway applications)
+      - Protection Type Testing of Power Electronic Converter with Omicron Testing Equipment
+
+  - role: Lines Design Intern
+    company: Ergon Energy
+    website: https://www.ergon.com.au
+    date: Nov 2009 <br />- Feb 2010
+    highlights:
+      - Setting up control device for Aeolian Vibration testing on a conductor span
+      - Performed earth resistance testing and earthing grid calculations in CDEGS software
+      - Assisted team with line surveys for HV line routes
+
+  - role: Distribution Planning Intern
+    company: Ergon Energy
+    website: https://www.ergon.com.au
+    date: Oct 2008 <br />- Jun 2009
+    highlights:
+      - Developed and automated SWER reporting template for 10-year strategic assessment
+      - Completed 10-year SWER audits for SWERs in Mackay and Capricorn regions
+      - Assisted with Wattlebank and North Rockhampton 10-year planning studies
+      - Performed future load predictions for Proserpine and Gracemere regions
+      - Performed several cable load factor and distribution fault level assessments
+      - 1 month of field work in the transformer workshop and TEST section upgrading relays
+
+  - role: Retail Assistant
+    company: Kmart Rockhampton
+    date: Aug 2004 <br />- Sep 2008
+    highlights:
+      - Experience working in all store departments
+      - Resolving customer complaints and handling product returns
+      - Supervision of up to 8 checkout staff as front-end supervisor
+
+skills:
+  - Clear and articulate verbal and written communication skills
+  - Well-developed problem-solving, teamwork and leadership skills
+  - Self-motivated and able to work independently and unsupervised
+  - "Extensive experience with:"
+  - subpoint:
+    - PowerFactory, Sincal and DINIS load flow software for network and fault analysis
+    - Python and VBA programming languages for task automation
+    - ESRI, Smallworld and Google Earth GIS programs
+    - Analysing and reporting on data through SQL queries on corporate data
+
+licences:
+  - <a href="https://www.bpeq.qld.gov.au/Party.aspx?ID=28223">RPEQ</a>
+  - MIEAust CPEng
+  - Construction Industry White Card
+  - Driver's License (C Class)
+
+publications:
+  - title: Impacts of voltage transition from 240V to 230V voltage standard
+    authors: A Guinane, D McPhail, M Gorman
+    published:  Power Engineering Conference (AUPEC), 2016 Australasian Universities
+    link: http://ieeexplore.ieee.org/abstract/document/7749295/
+
+  - title: Voltage fluctuations in PV penetration on SWER networks - A case study for regional Australia
+    authors:  A Guinane, GM Shafiullah, AMT Oo, BE Harvey
+    published:  Power and Energy Society General Meeting, 2012 IEEE
+    link: http://ieeexplore.ieee.org/abstract/document/6344630/
