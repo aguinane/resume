@@ -20,15 +20,18 @@ experience:
     date: Jun 2014 <br />- present
     highlights:
       - Identification and resolution of customer Quality of Supply (QoS) complaints
-      - Analysis of power quality meter recordings, and development of a website suite with automated reporting of QoS issues
+      - Analysis of power quality meter recordings, and development of a website suite with automated reporting and visualisation of QoS issues
       - Developed automated daily reporting of PQ Health, to proactively identify and rectify site issues before a customer complaint is made
+      - Developed reporting of momentary outage events to flag unresolved network faults
+      - Created and maintain a reporting website used by 250+ staff from various parts of the business that significantly improves effeciency of accessing information
+      - PQ Subject Matter Expert (SME) for PowerFactory Modelling Software and chair of PowerFactory Scripting Committee
       - Investigation and analysis into impacts of transitioning Queensland's nominal network voltage from 240 to 230V
       - subpoint:
         - Developed business case and pilot project with business savings of $25.4 million
         - Direct customer engagement with customers part of the pilot project
         - Worked with Department of Energy and Water Supply (DEWS) to develop a <a href="https://www.dews.qld.gov.au/__data/assets/pdf_file/0005/1279571/decision-ris-qld-statutory-voltage-limits.pdf">regulatory impact statement</a> which predicted savings of $215 million for QLD
-      - Developed automated reporting of momentary outage events to flag unresolved network faults
-      - PQ Subject Matter Expert (SME) for Power Factory Modelling Software and chair of PowerFactory Scripting Committee (PFSC)
+        - Coordination of <a href="https://www.ergon.com.au/network/network-management/network-infrastructure/230-volt-transition">230V transition</a> works program and stakeholder engagement
+      - Supported the preparation of the <a href="https://www.ergon.com.au/network/network-management/future-investment/distribution-annual-planning-report">Distribution Annual Planning Report (DAPR)</a>
 
   - role: Toowoomba Regional Group Secretary
     company: Engineers Australia
@@ -44,7 +47,7 @@ experience:
     highlights:
       - Responded to data requests and analysis for customer compensation claims
       - Responded to government information requests and regulatory reporting requirements
-      - Assisting with major customer connection pre-commisioning testing requirements
+      - Assisting with major customer connection pre-commissioning testing requirements
 
   - role: Network Strategy and Policy Engineer (Acting)
     company: Ergon Energy
@@ -53,7 +56,7 @@ experience:
     highlights:
       - Responded to technical customer enquiries about Micro Embedded Generation Units (generally rooftop solar)
       - Responded to various government questions and information requests
-      - Identified preliminary list of suitable locations for Electric Vechile (EV) charging stations for QLD '<a href="http://www.abc.net.au/news/2017-07-27/free-charging-stations-to-boost-queensland-electric-car-numbers/8748246">super-highway</a>'
+      - Identified preliminary list of suitable locations for Electric Vehicle (EV) charging stations for QLD '<a href="http://www.abc.net.au/news/2017-07-27/free-charging-stations-to-boost-queensland-electric-car-numbers/8748246">super-highway</a>'
       - Developed preliminary strategy for identifying non-compliance of partial export connections
       - Developed reporting dashboard for worst performing feeders
 
@@ -135,12 +138,13 @@ skills:
   - "Extensive experience with:"
   - subpoint:
     - PowerFactory, Sincal and DINIS load flow software for network and fault analysis
+    - ESRI, SmallWorld and Google Earth GIS programs
+    - PI Historian for time-series data
     - Python and VBA programming languages for task automation
-    - ESRI, Smallworld and Google Earth GIS programs
     - Analysing and reporting on data through SQL queries on corporate data
 
 licences:
-  - <a href="https://www.bpeq.qld.gov.au/Party.aspx?ID=28223">RPEQ</a>
+  - <a href="https://www.bpeq.qld.gov.au/Party.aspx?ID=28223">Registered Professional Engineer of Queensland</a> (RPEQ)
   - MIEAust CPEng
   - Construction Industry White Card
   - Driver's License (C Class)

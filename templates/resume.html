@@ -68,9 +68,14 @@
 		<em>{{entry.date}}</em>
 	</div><!-- /col -->
 </div><!-- /row -->
+{% if not loop.last %}
+<hr />
+{% endif %}
 {% endfor %}
 
 </section>
+
+<div class="pagebreak" style="page-break-after: always;"> </div>
 
 <section id=education>
 <h1 class="border-bottom border-dark">Education</h1>
