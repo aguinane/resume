@@ -1,148 +1,131 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
 
-    <title>Résumé of {{contact.name}}</title>
-  </head>
+    <title>Résumé of {{basics.name}}</title>
+</head>
 
 <body>
-<div class="container" style="max-width: 842px;">
+    <div class="container" style="max-width: 842px;">
 
-<h1 class="display-5">Résumé of {{contact.name}} <small class="text-muted">{{contact.post}}</small></h1>
+        <header>
+            <h1 class="display-5">Résumé of {{basics.name}} <small class="text-muted">{{basics.label}}</small></h1>
 
-<blockquote class="blockquote text-right">
-<p class="lead">
-	<small>
-	<address>
-	{% if contact.email %}
-	📧 <a href="mailto:{{contact.email}}">{{contact.email}}</a>
-	{% endif %}
-	{% if contact.email %}
-	📱 {{contact.phone}}
-	{% endif %}
-	{% if contact.address %}
-	📮 {{contact.address}}
-	{% endif %}
-	{% if contact.web %}
-	🌏 <a href="{{contact.web}}">{{contact.web}}</a>
-	{% endif %}
-	</address>
-	</small>
-</p>
-</blockquote>
+            <blockquote class="blockquote text-right">
+                <p class="lead">
+                    <small>
+                        <address>
+                            {% if basics.email %}
+                            📧 <a href="mailto:{{basics.email}}">{{basics.email}}</a>
+                            {% endif %}
+                            {% if basics.phone %}
+                            📱 {{basics.phone}}
+                            {% endif %}
+                            {% if basics.website %}
+                            🌏 <a href="{{basics.website}}">{{basics.website}}</a>
+                            {% endif %}
+                        </address>
+                    </small>
+                </p>
+            </blockquote>
 
-<section id=experience>
-<h1 class="border-bottom border-dark">Experience</h1>
+        </header>
 
-{% for entry in experience %}
-<div class="row justify-content-start">
-	<div class="col">
-		<strong>{{entry.role}}</strong>
-		{% if entry.website %}
-		<a href="{{entry.website}}"><small class="text-danger">{{entry.company}}</small></a>
-		{% else %}
-		<small class="text-danger">{{entry.company}}</small>
-		{% endif %}
-		<br />
-		<ul>
-		{% for highlight in entry.highlights %}
-		{% if highlight.subpoint %}
-			<ul>
-			{% for subpoint in highlight.subpoint %}
-				<li>{{subpoint}}</li>
-			{% endfor %}
-			</ul>
-		{% else %}
-		<li>{{highlight}}</li>
-		{% endif %}
-		{% endfor %}
-		</ul>
-	</div><!-- /col -->
-	<div class="col-2 text-right">
-		<em>{{entry.date}}</em>
-	</div><!-- /col -->
-</div><!-- /row -->
-{% if not loop.last %}
-<hr />
-{% endif %}
-{% endfor %}
+        <section id=experience>
+            <h2 class="border-bottom border-dark">Experience</h2>
 
-</section>
+            {% for entry in work + volunteer %}
+            <strong>{{entry.position}}</strong>
+            {% if entry.website %}
+            <a href="{{entry.website}}"><small class="text-danger">{{entry.company}}</small></a>
+            {% else %}
+            <small class="text-danger">{{entry.company}}{{entry.organization}}</small>
+            {% endif %}
+            <small class="text-muted">{{entry.startDate}} - {{entry.endDate}}</small>
+            <br />
+            {{entry.summary}}
+            <ul>
+                {% for highlight in entry.highlights %}
+                <li>{{highlight}}</li>
+                {% endfor %}
+            </ul>
 
-<div class="pagebreak" style="page-break-after: always;"> </div>
+            {% if not loop.last %}
+            <hr />
+            {% endif %}
+            {% endfor %}
 
-<section id=education>
-<h1 class="border-bottom border-dark">Education</h1>
+        </section>
 
-{% for entry in education %}
-<div class="row justify-content-start">
+        <div style='page-break-after:always'></div>
+        <section id=education>
+            <h2 class="border-bottom border-dark">Education</h2>
 
-	<div class="col">
-		<strong>{{entry.name}}</strong><br />
-		{{entry.summary}}<br />
-		{{entry.grade}}<br />
-		<ul>
-		{% for highlight in entry.highlights %}
-		<li>{{highlight}}</li>
-		{% endfor %}
-		</ul>
-	</div><!-- /col -->
-	<div class="col-2 text-right">
-		<em>{{entry.date}}</em>
-	</div><!-- /col -->
-</div><!-- /row -->
-{% endfor %}
+            {% for entry in education %}
 
-</section>
+            <strong>{{entry.studyType}} {{entry.area}}</strong>
+            <small class="text-danger">{{entry.institution}}</small>
+            <small class="text-muted">{{entry.startDate}} - {{entry.endDate}}</small>
+            <br />
+            GPA {{entry.gpa}}<br />
+            {% endfor %}
+
+        </section>
+
+        {% if publications %}
+        <section id=publications>
+            <h2 class="border-bottom border-dark">Publications</h2>
+            <ul>
+                {% for entry in publications %}
+                <li>"{{entry.name}}", {{entry.releaseDate}} 
+                    <br /><em><a href="{{entry.website}}">{{entry.publisher}}</a></em>
+                </li>
+                {% endfor %}
+            </ul>
+        </section>
+        {% endif %}
 
 
-{% if licences %}
-<section id=licences>
-<h1 class="border-bottom border-dark">Qualifications and Licenses</h1>
-    <ul>
-	{% for entry in licences %}
-		<li>{{entry}}</li>
-	{% endfor %}
-	</ul>
-</section>
-{% endif %}
+        {% if awards %}
+        <section id=awards>
+            <h2 class="border-bottom border-dark">Awards</h2>
+            <ul>
+                {% for entry in awards %}
+                <li>"{{entry.title}}" <em>{{entry.awarder}}</em>
+                </li>
+                {% endfor %}
+            </ul>
+        </section>
+        {% endif %}
 
-{% if publications %}
-<section id=publications>
-<h1 class="border-bottom border-dark">Publications</h1>
-    <ul>
-	{% for entry in publications %}
-		<li>"{{entry.title}}", {{entry.authors}} <em><a href="{{entry.link}}">{{entry.published}}</a></em></li>
-	{% endfor %}
-	</ul>
-</section>
-{% endif %}
 
-{% if skills %}
-<section id=skills>
-	<h1 class="border-bottom border-dark">Transferable Skills</h1>
-	<ul>
-	{% for entry in skills %}
-		{% if entry.subpoint %}
-			<ul>
-			{% for subpoint in entry.subpoint %}
-				<li>{{subpoint}}</li>
-			{% endfor %}
-			</ul>
-		{% else %}
-		<li>{{entry}}</li>
-		{% endif %}
-	{% endfor %}
-	</ul>
-</section>
-{% endif %}
+        {% if skills %}
+        <section id=skills>
+            <h2 class="border-bottom border-dark">Skills</h2>
+            <ul>
+                {% for entry in skills %}
+                <p>
+                <strong>{{entry.name}}</strong>
+                {% if entry.keywords %}
+                    {% for keyword in entry.keywords %}
+                    {{keyword}}{% if not loop.last %}, {% endif %}
+                    {% endfor %}
+                {% endif %}
+            </p>
+                {% endfor %}
+            </ul>
+        </section>
+        {% endif %}
 
-</div><!-- /container -->
+
+    </div><!-- /container -->
 </body>
+
 </html>
