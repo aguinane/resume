@@ -4,7 +4,9 @@ import shutil
 import json
 import pdfkit
 from jinja2 import Environment, FileSystemLoader
-from jsonresume import Resume
+import colander
+from jsonresume.schema.resume import Resume as ResumeSchema
+
 
 env = Environment(loader=FileSystemLoader("templates"))
 
@@ -12,9 +14,7 @@ env = Environment(loader=FileSystemLoader("templates"))
 def main():
     json_file = open("data/resume.json", "r")
     resume_data = json.load(json_file)
-    r = Resume(resume_data)
-    if not r.is_valid():
-        print("resume.json does not validate JSON Resume Schema")
+    validate_json_format(resume_data)
     template = env.get_template("resume.html")
     output_html = template.render(**resume_data)
     Path("build").mkdir(exist_ok=True)
@@ -23,6 +23,16 @@ def main():
     copy_static_data()
     logging.info("Created html!")
     pdfkit.from_file("build/resume.html", "build/resume.pdf")
+
+
+def validate_json_format(resume_data):
+    """ Validate schema """
+    try:
+        resume = ResumeSchema().deserialize(resume_data)
+    except colander.Invalid:
+        logging.exception("resume has invalid JSON format")
+    else:
+        logging.info("Resume structure: {}".format(resume))
 
 
 def copy_static_data():

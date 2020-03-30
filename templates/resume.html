@@ -48,7 +48,7 @@
             {% else %}
             <small class="text-danger">{{entry.company}}{{entry.organization}}</small>
             {% endif %}
-            <small class="text-muted">{{entry.startDate}} - {{entry.endDate}}</small>
+            <small class="text-muted">{{entry.startDate}} - {% if entry.endDate %}{{entry.endDate}}{% else %}present{% endif %}</small>
             <br />
             {{entry.summary}}
             <ul>
