@@ -48,14 +48,19 @@
             {% else %}
             <small class="text-danger">{{entry.company}}{{entry.organization}}</small>
             {% endif %}
-            <small class="text-muted">{{entry.startDate}} - {% if entry.endDate %}{{entry.endDate}}{% else %}present{% endif %}</small>
+            <small class="text-muted">{{entry.startDate|yearmonth}} -
+                {% if entry.endDate %}{{entry.endDate|yearmonth}}{% else %}present{% endif %}</small>
             <br />
             {{entry.summary}}
+
+            {% if  entry.highlights %}
             <ul>
                 {% for highlight in entry.highlights %}
                 <li>{{highlight}}</li>
                 {% endfor %}
             </ul>
+            {% endif %}
+
 
             {% if not loop.last %}
             <hr />
@@ -64,17 +69,18 @@
 
         </section>
 
-        <div style='page-break-after:always'></div>
+
         <section id=education>
             <h2 class="border-bottom border-dark">Education</h2>
 
             {% for entry in education %}
 
-            <strong>{{entry.studyType}} {{entry.area}}</strong>
-            <small class="text-danger">{{entry.institution}}</small>
-            <small class="text-muted">{{entry.startDate}} - {{entry.endDate}}</small>
-            <br />
-            GPA {{entry.gpa}}<br />
+            <p>
+                <strong>{{entry.studyType}} {{entry.area}}</strong>
+                <small class="text-danger">{{entry.institution}}</small>
+                <small class="text-muted">{{entry.endDate|yearmonth}}</small>
+                GPA {{entry.gpa}}
+            </p>
             {% endfor %}
 
         </section>
@@ -84,7 +90,7 @@
             <h2 class="border-bottom border-dark">Publications</h2>
             <ul>
                 {% for entry in publications %}
-                <li>"{{entry.name}}", {{entry.releaseDate}} 
+                <li>"{{entry.name}}"
                     <br /><em><a href="{{entry.website}}">{{entry.publisher}}</a></em>
                 </li>
                 {% endfor %}
@@ -92,14 +98,24 @@
         </section>
         {% endif %}
 
+        {% if projects %}
+        <section id=projects>
+            <h2 class="border-bottom border-dark">Noteworthy Projects</h2>
+            <dl>
+                {% for entry in projects %}
+                <dt>{{entry.name}} <a href="{{entry.url}}"><small class="text-muted">{{entry.url}}</small></a></dt>
+                <dd>{{entry.description}}</dd>
+                {% endfor %}
+            </dl>
+        </section>
+        {% endif %}
 
         {% if awards %}
         <section id=awards>
             <h2 class="border-bottom border-dark">Awards</h2>
             <ul>
                 {% for entry in awards %}
-                <li>"{{entry.title}}" <em>{{entry.awarder}}</em>
-                </li>
+                <li><em>{{entry.title}}</em> {{entry.awarder}}</li>
                 {% endfor %}
             </ul>
         </section>
@@ -111,14 +127,13 @@
             <h2 class="border-bottom border-dark">Skills</h2>
             <ul>
                 {% for entry in skills %}
-                <p>
-                <strong>{{entry.name}}</strong>
-                {% if entry.keywords %}
+                <dt>{{entry.name}}</dt>
+                <dd> {% if entry.keywords %}
                     {% for keyword in entry.keywords %}
                     {{keyword}}{% if not loop.last %}, {% endif %}
                     {% endfor %}
-                {% endif %}
-            </p>
+                    {% endif %}
+                </dd>
                 {% endfor %}
             </ul>
         </section>

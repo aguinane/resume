@@ -2,3 +2,4 @@ jsonresume-validator
 colander
 pdfkit
 jinja2
+requests
